@@ -24,6 +24,6 @@ else
 	sleep 1
 	echo "255" > /sys/devices/platform/leds/leds/orange:wan/brightness
         sleep 1  
-        echo "0" > /sys/devices/platform/leds/leds/orange:wps/brightness
+        echo "0" > /sys/devices/platform/leds/leds/orange:wan/brightness
 
 fi
