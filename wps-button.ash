@@ -4,7 +4,7 @@
 #do a http request with the api key, ip and time variable from the config file
 HTTP_RESPONSE=$(curl -X GET "http://$PIHOLE_IP/admin/api.php?disable=$DISABLE_TIME&auth=$API_KEY")
 
-#pihole will give out {"status":"disabled"} in json if the request was successful.
+#pihole will give out {"status":"disabled"} if the request was successful.
 if [ $HTTP_RESPONSE = '{"status":"disabled"}' ]
 then
         #if the response was sucessful, the WPS LED light will blink 2 times
