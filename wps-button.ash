@@ -1,5 +1,11 @@
 #!/usr/bin/ash
-. /root/config.ash
+
+#pihole server API Key
+API_KEY=""
+#The IP of pihole server
+PIHOLE_IP=""
+#Disabling time in seconds  
+DISABLE_TIME="180"
 
 #do a http request with the api key, ip and time variable from the config file
 HTTP_RESPONSE=$(curl -X GET "http://$PIHOLE_IP/admin/api.php?disable=$DISABLE_TIME&auth=$API_KEY")
